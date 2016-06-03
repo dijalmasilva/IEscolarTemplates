@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/04/2015, 10:20:07
+    Author     : Elisiany Oliveira
+*/
+
+@import "../fonts/OpenSans/stylesheet.css";
+
+div#container_conteudo{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    font-family: 'open_sanslight';
+    margin: 0 auto;
+}
+
+div#container_conteudo h1{
+    color: #5F9B67;
+    margin-left: 20px;
+}
+
+div#container_conteudo p{
+    font-size: 16px;
+    font-family: 'open_sansregular';
+    color: #000;
+}
+
+.bt-imprimir{
+    margin-top: -50px !important;
+    margin-right: -100px !important;
+}
+
+.bt-editar{
+    margin-left: -30px !important;
+}
+.bt-add{
+    margin-left: -10px !important;
+}
+
+#campo-acao{
+    width: 110px;
+    margin: 0 auto;
+
+}
+
+.bt-imprimir a{
+    width: 12px !important;
+    height: 12px !important;
+    display: inline;
+}
+
+.bt-imprimir img{
+    width: 12px;
+    height: 12px;
+    display: block;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 3px;
+    background-image: -moz-linear-gradient(center top , #FFF, #E6E6E6);
+    margin-top: -25px !important;
+}
+
+.bt-cadastro{
+    margin-bottom: 20px;   
+}
+
+#print{
+    float: right;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #F5F5F5;
+    outline: none !important;
+}
+
+#print a{
+    color: #333;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+#print img{
+    width: 20px;
+    height: 20px;
+    outline: none !important;
+}
+
+#print:hover{
+    background-color: #d5d5d5;
+}
+
+#bt-print-datatable{
+    float: right;
+    text-align: center;
+    margin: 0;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    outline: none !important;
+    width: 29px;
+    height: 23px;
+}
+
+#bt-print-datatable img{
+    margin-top: 3px;
+}
+
+#bt-print-datatable:hover{
+    background-color: #E6E6E6;
+}
+
+.print-prof, .print-sec{
+    margin-top: -42px !important;
+}
+
+.print-relatorio-turmas-cadastradas{
+    margin-top: -30px !important; 
+    margin-right: 3px !important;
+}
+
+.item-menu .ui-menuitem-text{
+    white-space: normal !important;
+}
+
+.menuitem .ui-menuitem {
+    width:  170px !important;
+}
+
+.menuitem .ui-menu-child {
+    width:  170px !important;
+}
+.ui-state-default, .ui-widget-content, .ui-state-default{
+    background-image: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,157 @@
+body{
+    font-family: sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    background-image: url("#{resource['imagens:background/back_1.png']}");
+}
+
+div#site{
+    width: 80%;
+    height: auto;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+div#background_top{
+    width: 100%;
+    height: 161px;
+    background-image: url("#{resource['imagens:background/back_2.png']}");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+div#site-wrapper{
+    margin-top: -140px;
+}
+
+div#container_content_topo{
+    width: 100%;
+    height: 96px;
+    padding-bottom: 50px;
+}
+
+div#container_user{
+    width: 25%;
+    /*cursor: pointer;*/
+    height:65px;
+    float: left;
+    margin-top: 60px;
+}
+div#logo_icon{
+    width: 50%; 
+    height: 93px;
+    font-size: 14px; 
+    font-weight: bold; 
+    text-align:center;
+    line-height: 1.8em;
+    margin-top: 20px;
+    float: left;
+}
+div#container_logo_prefeitura{
+    float: right; 
+    width: 25%;
+    text-align: center;
+    margin-top: 40px;
+    text-align: right;
+}
+div#user_icon{ 
+    width: 100%;
+}
+span.titulo_modulo{
+    position: absolute;
+    font-size: 18px;
+    color: #388F36;
+    padding-top: 30px;
+    padding-left: 15px;
+
+}
+div#container_menu{
+    clear: both;
+    width: 100%;
+    margin-top: 16px;
+    padding-bottom: 10px;
+}
+
+div#container-mapa-localizacao{
+    padding-bottom: 10px;
+}
+
+div#container_conteudo{
+    width: 100%;
+    min-height: 400px;
+    height:auto;
+    background-color: #FFFFFF;
+    -moz-border-radius: 10px;
+    border: 4px solid #F2F2F2;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.right-column{
+    margin-left: 50px;
+}
+#container_rodape{
+    height: 80px;
+    min-height: 80px;
+    padding-top: 30px;
+}
+span.titulo{
+    font-size:15px;
+    color: #777777;
+    display: block;
+    padding:20px 20px;
+}
+
+p.bem-vindo{
+    font-weight: bold;
+    color: #558b5c !important;
+    font-size:13px;
+    padding:0px 20px;
+    margin-top: 50px;
+}
+
+p.texto-ajuda-inicial{
+    font-size:13px;
+    color: #333333 !important;
+    padding:0px 20px;
+}
+.ui-panelgrid .ui-widget{
+    border: none;
+}
+
+.ui-menu-list .menu-logout{
+    float: right !important;
+}
+
+.menu-logout .ui-menu-list{
+    width: auto !important;    
+    min-width: 100% !important;    
+}
+.selectSerie.ui-selectcheckboxmenu{
+    display: block;
+}
+.btn-success{
+    height: 35px !important;
+    background-color: #388F36 !important;
+    background-image: none !important;
+    background-repeat: no-repeat !important;
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+    outline: none !important;
+}
+.btn-cancela{
+    height: 35px !important;
+    background-color: #FF2F36 !important;
+    background-image: none !important;
+    background-repeat: no-repeat !important;
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+    outline: none !important;
+}
+.ui-button-margin {
+    margin-right:0.5em !important;
+}
+
+.ui-state-error, .ui-widget-content .ui-state-error{
+    color: #000;
+}

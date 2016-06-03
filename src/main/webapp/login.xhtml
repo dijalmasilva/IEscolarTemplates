@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>IEscolar Online - Login</title>
+        <link rel="stylesheet" type="text/css" href="resources/css/login.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'></link>-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'></link>
+        <script src="resources/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <h:outputScript library="js" name="keypresedValidator.js"/>
+        <h:outputScript library="js" name="functions.js"/>
+        <h:outputScript library="primefaces" name="jquery/jquery.js" target="head" />
+    </h:head>
+    <h:body>
+        <h:form prependId="false"> 
+
+            <div id="box-body">
+
+                <div id="box-cabecalho">
+
+                    <div class="texto">
+                        PREFEITURA MUNICIPAL DE CAJAZEIRAS<br/>
+                        SECRETÁRIA DE EDUCAÇÃO<br/>
+                        <hr class="separator"/>
+                        <span>IEscolar - Sistema de Gestão Escolar</span>
+                    </div>
+
+
+                    <!--<script src="resources/js/bubbles.js" type="text/javascript"></script>-->
+                </div>
+
+                <div class="center-div">
+                    <div class="box-logo-empresa">
+                        <img src="resources/imagens/logo/logo-rodape.svg"/>
+                    </div>
+
+                </div>
+
+                <div id="box-container">
+
+                    <div class="box-login">
+                        <span id="errorCaps">Atenção!!! A tecla Caps Lock está ativada</span>
+                        <h5>Matrícula:</h5>
+                        <p:inputText id="login"
+                                     onblur="maskLogin(this)"
+                                     value="#{loginMB.usuario.login}" 
+                                     styleClass="input-form"
+                                     maxlength="14"
+                                     required="true" requiredMessage="Campo Login Obrigatório"/>
+
+                        <h5>Senha:</h5>
+                        <p:password id="senha" value="#{loginMB.usuario.senha}" 
+                                    styleClass="input-form"
+                                    required="true" requiredMessage="Campo Senha Obrigatório" 
+                                    redisplay="true"/>
+
+                        <h:commandButton id="btEntrar" value="Entrar"
+                                         styleClass="bt-logar"
+                                         actionListener="#{loginMB.login()}"/>
+
+                        <p> 
+                            <p:commandLink value="Esqueci minha senha" 
+                                           onclick="PF('recoverPawword').show();" />
+                        </p>
+
+                        <p:messages id="messages" showSummary="true" closable="true"/>
+
+                    </div>
+
+                </div>
+
+                <div id="box-rodape">
+                    <p><a href="ajuda.xhtml" class="forward">
+                            Manuais
+                        </a> 
+                        | 
+                        <a href="contato.xhtml" class="help">
+                            Ajude-nos a melhorar ainda mais!
+                        </a> 
+                    </p>
+                    <p>
+                        <a href="http://redenetsolucoes.com.br/" target="_blank" class="forward">
+                            Redenet&nbsp;-&nbsp;Comércio e Soluções em TI
+                        </a>
+                        |
+                        <a href="tickets/login.xhtml" target="_blank" class="forward">
+                            Área Restrita
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </h:form>
+
+        <p:dialog visible="false" 
+                  height="140"
+                  header="ESQUECI MINHA SENHA"
+                  resizable="false"
+                  draggable="false"
+                  closable="true"
+                  modal="true"
+                  widgetVar="recoverPawword" styleClass="center-div">
+
+            <h:form prependId="false" id="formRecuperaSenha">
+                <h:panelGrid>
+                    <h:outputLabel>Por favor, digite o email informado no seu cadastrado<span class="campo-obrigatorio">*</span>:</h:outputLabel><br/>
+                    <p:inputText id="email" value="#{loginMB.email}" required="true" requiredMessage="O campo EMAIL deve ser informado" style="width: 280px; height: 27px;"/>
+
+                    <p:commandButton value="Enviar senha" icon="ui-icon-mail-closed"
+                                     actionListener="#{loginMB.enviaSenhaPorEmail()}" 
+                                     update="formRecuperaSenha, msg" 
+                                     onstart="ajaxLoading.show()" 
+                                     onsuccess="ajaxLoading.hide()"
+                                     oncomplete="PF('recoverPawword').hide();"/>
+                    <p:message for="email" id="msg" showSummary="true" showDetail="false"/>
+                </h:panelGrid>
+            </h:form>
+        </p:dialog>
+    </h:body>
+</html>
+

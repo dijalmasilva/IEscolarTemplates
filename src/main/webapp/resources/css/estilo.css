@@ -1,0 +1,17 @@
+
+.parecer{
+    font-size: 14px;
+    text-align: left;
+    
+}
+.titulo{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff !important;
+    background-color: seagreen !important;
+    border: transparent !important;
+    text-align: left;
+}
+.select_item{
+    border-color: red;
+}

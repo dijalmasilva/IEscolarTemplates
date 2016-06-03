@@ -1,0 +1,75 @@
+/* 
+    Document   : mapstyle
+    Created on : 19/08/2015, 20:31:02
+    Author     : Felipe
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#title{
+    width: 450px;
+    background-color: #449d44;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+}
+
+#informativo{
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: right;
+}
+
+/*estilo que controla a div do infowindow NÃO REMOVER OU MODIFICAR*/
+.gm-style-iw{
+    width: 500px !important;
+    top: 22px !important;
+    left: 0 !important;
+}
+
+#right{
+    text-align: center;
+    padding: 15px;
+    font-family: sans-serif;
+}
+
+#foto{
+    width: 100px;
+    height: 120px;
+    border-width: 5px;
+    border-radius: 10px;
+    border-style: ridge;
+}
+
+#left{
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: left;
+    padding: 15px;
+}
+
+#footer{
+    font-size: 12px;
+    font-family: sans-serif;
+    width: 450px;
+    background-color: white;
+    border-top: 1px solid;
+    padding: 15px;
+}
+
+#table{
+    width: 450px;
+    border-collapse: collapse;
+    border-radius: 20px;
+    border: 1px solid #449d44;
+    background-color: white;
+}

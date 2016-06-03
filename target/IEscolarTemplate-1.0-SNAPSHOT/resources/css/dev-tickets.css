@@ -1,0 +1,415 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06/05/2015, 17:33:32
+    Author     : Elisiany Oliveira
+*/
+
+@import "../fonts/OpenSans/stylesheet.css";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'open_sansregular' !important;
+    font-size: 12pt;
+    background-color: #f9f9f9;
+}
+
+body, html{
+    position: relative;
+    height: 100%;
+}
+
+*, html, body{
+    font-family: 'open_sansregular' !important;
+    font-weight: normal !important;
+
+}
+
+#container-login{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 10pt;
+    font-family: 'open_sanslight';
+}
+
+#container-login a{
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    padding-top: 10px !important;
+}
+#container-login a:hover{
+    color: #5F9B67;
+}
+
+h1{
+    color: #5F9B67;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: -45px;
+    font-family: 'open_sanssemibold' !important;
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+    color: #5F9B67 !important;
+    font-family: 'open_sansbold' !important;
+    font-weight: lighter;
+    margin-top: 50px;
+}
+
+#container-login img{
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 5px;
+
+}
+
+.input-form-login{
+    width: 96%;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.bt-logar{
+    width: 99%;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12pt !important;
+    text-align: center;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: #5F9B67 !important;
+    /*background: #F3AC00 !important;*/
+    color: #fff !important;
+    border: none !important;
+    font-family: 'open_sanssemibold' !important;
+    outline: none;
+}
+
+.p-messages{
+    width: 96%;
+    margin-top: 5px;
+    height: 30px;
+}
+
+.bt-logar:hover{
+    background: #558b5c !important;
+
+}
+
+.ui-state-error{
+    color: #000 !important;
+}
+
+/*=======================CABEÇALHO===========================*/
+
+.ui-state-default, .ui-widget-content, .ui-state-default{
+    background-image: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.ui-menu.ui-menubar{
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+    font-size: 13px;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    height: 50px;
+}
+
+.ui-menu.ui-widget li > .ui-menuitem-link{
+    display: block;
+    margin-left: 10px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.ui-menu .ui-menuitem-text{
+    display: block;
+    margin-left: 10px;
+}
+
+.ui-menubar .ui-menuitem{
+    display: block;
+}
+
+.ui-state-default, .ui-widget-content, .ui-state-default{
+    background-image: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.ui-menu.ui-widget li > .ui-menuitem-link.ui-state-hover{
+    background-color: #5F9B67 !important; 
+    background: #5F9B67 !important; 
+    color: #fff;
+}
+
+.ui-menu.ui-widget li > .ui-menuitem-link.ui-state-hover:hover{
+    background-color: #5F9B67 !important; 
+    background: #5F9B67 !important; 
+    color: #fff;  
+}
+
+.ui-state-hover.nav-menu{
+    background-color: #5F9B67 !important; 
+    background: #5F9B67 !important; 
+}
+
+.ui-state-hover.nav-menu:hover{
+    color: #fff !important;
+}
+
+.ui-menu .ui-menu-parent .ui-menu-child{
+    width: 150px !important;
+    height: 40px !important;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-menu.ui-menubar .ui-menu-parent .ui-menu-child{
+    width: 100% !important;
+    height: 80px !important;
+    margin-right: -20px !important;
+}
+
+li.menu-item-sair ul {
+    top: 25px !important;
+}
+
+li.menu-item-sair ul.ui-widget-content{
+    background: none !important;
+    border: none;
+    border-radius: 0px !important;
+}
+
+ui-datatable{
+    margin-bottom: 80px !important;
+}
+
+#submenu-sair{
+    border: 1px solid #ccc;
+}
+
+.ui-selectonemenu .ui-widget .ui-state-default .ui-corner-all .ui-state-hover.dropdown-black-text:hover{
+    color: #000 !important;
+}
+
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error{
+    color: #000 !important;
+}
+
+/*=====================BODY=======================*/
+#cabecalho{
+    min-height:100%;
+
+}
+
+#body-container{
+    min-height:100%;
+    position: relative;
+}
+
+#container-principal{
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+    margin: 0 auto;  
+    overflow: hidden;
+}
+
+.ui-datatable{
+    margin: 0 auto;    
+    margin-top: 50px;
+    width: 90%;
+}
+
+.ui-datatable .ui-column-title{
+    font-size: 13px !important;
+}
+
+span.ui-column-title{
+    font-family: 'open_sanssemibold' !important;
+}
+
+#principal{
+    width: 40%;
+    height: 130px;
+    background-color: #F5F5EE;
+    margin: 0 auto; 
+    margin-top: 170px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.qtde-abertas{
+    width: 50px;
+    height: 40px;
+    background-color: #E74C3C;
+    border-radius: 100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+}
+
+#principal img{
+    float: right;
+    margin-top: -70px;
+    margin-right: -70px;
+    width: 150px;
+    height: 150px;
+    display: block;
+
+}
+
+#atualizacoes{
+    margin: 0 auto;  
+    padding: 10px;
+    width: 70%;
+    height: 80%;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.novas-chamadas{
+    width: 180px;
+    height: 180px;
+    float: left;
+    background-color: #ffa500;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 100px;
+    margin-top: 20px;    
+    text-align: center;
+}
+
+.novas-chamadas p{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.chamadas-trabalhando{
+    width: 180px;
+    height: 180px;
+    float: right;
+    background-color: #40e0d0;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 100px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*========================================*/
+
+#print{
+    float: right;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #F5F5F5;
+    margin-top: -70px;
+    margin-right: 66px;
+    outline: none !important;
+}
+
+#print a{
+    color: #333;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+#print img{
+    width: 20px;
+    height: 20px;
+    outline: none !important;
+}
+
+#print:hover{
+    background-color: #7ECC7F;
+}
+
+.bt-geral{
+    outline: none !important;
+}
+
+
+/*==============RODAPE=================*/
+
+#rodape{
+    position:relative;
+    bottom:0;
+    width:100%;
+    height: 50px;
+    margin-top: 120px;
+    font-size: 12px;
+    text-align: center;
+    color: #000;
+
+}
+
+/*=====================================*/
+
+#altera-senha{
+    width: 212px;
+    height: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-alter-senha{
+    display: block;
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.bt-alter-senha{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.msg-alter-senha{
+    width: 350px; 
+    margin: 0 auto; 
+    margin-top: -100px;
+}
+
+.panel-grid{
+    
+}
+
+.panel-grid label{
+    font-family: 'open_sanssemibold' !important;
+    
+}

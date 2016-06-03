@@ -1,0 +1,164 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/04/2015, 18:24:55
+    Author     : Elisiany Oliveira
+*/
+
+@import "../fonts/OpenSans/stylesheet.css";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'open_sansregular';
+    font-size: 14pt;
+}
+
+html, a, ul, li, p{
+    font-family: 'open_sansregular';
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    color: #5F9B67;
+    font-family: 'open_sanssemibold';
+}
+
+#voltar{
+    float: right;
+    margin-top: 27px;
+    margin-right: 20px;
+}
+
+#voltar a{
+    font-size: 16px;
+    background-color: #5F9B67;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    border-color: #4c7c52;
+    border-bottom: 3px solid #4C7C52 !important;
+}
+
+#voltar a:hover {
+    background: #558b5c none repeat scroll 0 0 !important;
+}
+
+#topo{
+    width: 100%; 
+    height: 80px; 
+    background-color: #f9f9f9;
+    border-bottom: 1px dashed #565656; 
+}
+
+#topo img{
+    float: left; 
+    height: 65px; 
+    width: 162px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#topo-prof{
+    width: 100%; 
+    height: 80px; 
+    background-color: #f9f9f9;
+    border-bottom: 1px dashed #565656; 
+}
+
+#topo-prof img{
+    float: left; 
+    height: 70px; 
+    width: 70px;
+    margin-top: 3px;
+    margin-left: 30px;
+}
+
+#topo-prof h3{
+    padding-left: 20px;
+    float: left;
+    margin-top: 25px;
+    color: #5F9B67;
+    display: inline;
+}
+
+#container-ajuda{
+    width: 80%;
+    margin: 0 auto; 
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+#icone-ajuda{
+    text-align: center; 
+    margin: 0 auto;
+    line-height: 1.5em;
+}
+
+#icone-ajuda img{
+    margin-bottom: 10px;
+}
+
+#manuais{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.margem-bottom{
+    margin-bottom: 30px !important;
+}
+
+.margem-bottom-2{
+    margin-bottom: 20px !important;
+}
+
+#manuais ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#manuais ul li{
+    display: inline-table;
+    width: 220px;
+}
+
+#manuais ul li a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+#manuais ul li a:hover{
+    text-decoration: underline;
+    color: #5F9B67;
+}
+
+#rodape{
+    text-align: center; 
+    font-size: 12px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+#rodape a {
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+
+#rodape a:hover {
+    text-decoration: underline;
+    color: #5F9B67;
+}

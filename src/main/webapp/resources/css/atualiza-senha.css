@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/04/2015, 18:00:56
+    Author     : Elisiany Oliveira
+*/
+
+@import "../fonts/OpenSans/stylesheet.css";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    font-family: 'open_sanslight';
+    font-size: 14pt;
+    font-weight: normal !important;
+}
+
+#topo{
+    width: 100%;
+    height: 35px;
+    background-color: #5F9B67;
+    text-align: center;
+    color: #fff;
+    font-family: 'open_sanssemibold';
+    padding-top: 5px;
+    margin-bottom: -15px;
+}
+
+h2{
+    font-family: 'open_sanssemibold' !important;
+}
+
+p, span{
+    font-family: 'open_sansregular' !important;
+}
+
+td{
+    font-family: 'open_sanslight';
+    /*font-weight: bold;*/
+    font-size: 16px;
+}
+
+.separator{
+    border: none; 
+    border-bottom: 1px dashed #565656;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+#formulario{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+    -moz-border-radius: 10px;
+}
+
+.bt-voltar{
+    font-family: 'open_sanslight';
+    float: left;
+    text-align: center;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: #EE3B3B !important;
+    color: #fff !important;
+    border: none !important;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.bt-enviar{
+    font-family: 'open_sanslight';
+    font-size: 14px;
+    float: right;
+    text-align: center;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: #5F9B67 !important;
+    color: #fff !important;
+    border: none !important;
+    margin-right: -1px !important;
+    margin-bottom: 10px;
+}
+
+.input-form{
+    width: 287px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+#container-formulario{
+    width: 80%; 
+    margin: 0 auto; 
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+#icone-seguranca{
+    text-align: center; 
+    line-height: 1.5em; 
+    margin-top: 30px;
+}

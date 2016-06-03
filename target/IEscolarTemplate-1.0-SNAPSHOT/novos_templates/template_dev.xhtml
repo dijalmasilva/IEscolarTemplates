@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <ui:insert name="title">
+            <title>DEVZONE</title>
+        </ui:insert>
+        <link rel="stylesheet" type="text/css" href="../resources/css/dev-tickets.css" />
+        <style>
+            body{
+                background-color: #fff;
+            }
+        </style>
+
+    </h:head>
+    <h:body>
+
+        <!--pagina toda-->
+        <div id="body-container">
+
+            <!--topo-->
+            <div id="cabecalho">
+                <h:form>
+                    <p:menubar styleClass="menu-bar">
+                        <p:menuitem icon="ui-icon-home" value="Início" url="/tickets/index.xhtml" ajax="false" /> 
+                        <p:menuitem icon="ui-icon-comment" value="Todos os tickets" url="/tickets/todas.xhtml" ajax="false" /> 
+                        <p:menuitem icon="ui-icon-folder-open" value="Em aberto" url="/tickets/abertas.xhtml" ajax="false" /> 
+                        <p:menuitem icon="ui-icon-transferthick-e-w" value="Em progresso" url="/tickets/progresso.xhtml" ajax="false" /> 
+                        <p:menuitem icon="ui-icon-heart" value="Concluído" url="/tickets/concluido.xhtml" ajax="false" /> 
+                           
+                        <p:submenu label="Relatórios" icon="ui-icon-print" styleClass="menu-item-sair">
+                        <p:menuitem styleClass="item-menu" value="Relatório de Controle Geral" target="_blank" ajax="false" actionListener="#{relatorioMB.abreRelatorio()}">
+                            <f:param name="tipoDoRelatorio" value="RELATORIO_GERAL_DO_SISTEMA"/>
+                        </p:menuitem>
+                        </p:submenu>
+                        
+                        <p:submenu label="#{ticketsMB.viewDevLogado().nome}" 
+                                   icon="ui-icon-person" style="float: right; margin-right: 30px;" styleClass="menu-item-sair">                                
+                            
+                            <p:menuitem  ajax="false" value="Alterar Senha" icon="ui-icon-key" 
+                                         action="alterasenha.xhtml?faces-redirect=true"/>
+                                                       
+                            <p:menuitem  ajax="false" value="Sair" icon="ui-icon-extlink"  
+                                        action="#{ticketsMB.logout()}"/>
+                        </p:submenu>
+
+                    </p:menubar>
+                </h:form>
+            </div>
+
+            <!--conteudo-->
+            <div id="container-principal">
+                <ui:insert name="conteudo-principal">
+                    Essa é a area de Tickets
+                </ui:insert>
+            </div>
+
+            <!--rodape-->
+            <div id="rodape">
+                IEscolar Online - Módulo Desenvolvedor<br/>
+                Redenet &copy; Todos os direitos reservados
+            </div>
+        </div>
+
+    </h:body>
+</html>
+

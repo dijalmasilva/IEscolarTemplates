@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>
+            <ui:insert name="titulo">Bem-vindo ao iEscolar Online!</ui:insert>
+        </title>
+        <h:outputStylesheet library="css" name="estilo.css"/>
+        <h:outputScript library="js" name="primefaces-locale.js"/>
+        <h:outputScript library="js" name="progress-bar.js"/>
+        <ui:insert name="style" id="style"/>
+        <ui:insert name="javascript" id="javascript"/>
+        <link rel="stylesheet" type="text/css" href="../resources/css/template.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/alterar-senha.css" />
+        <link rel="shortcut icon" type="image/png" href="../resources/imagens/logo/favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"></meta>
+    </h:head>
+    <h:body>
+
+        <!--pagina toda-->
+        <div id="pagina">
+
+            <!--cabecalho a pagina-->
+            <div id="cabecalho">
+
+                <div id="conteudo-cabecalho">
+
+                    <div id="cabecalho_user">
+                        <div id="user_icon">
+                            <img src="../resources/imagens/icons-help/sec_branco.svg" alt="Módulo Secretaria"/>
+                            <span class="titulo_modulo">Módulo do Diretor / Secretário Escolar</span>
+                        </div>
+                    </div>
+
+                    <div id="texto_cabecalho">
+                        PREFEITURA MUNICIPAL DE CAJAZEIRAS<br/>
+                        SECRETARIA DE EDUCAÇÃO<br/>
+                        #{loginMB.viewSecretarioLogado().escola.nome}
+                    </div>
+
+                    <div id="container_logo">
+                        <img src="../resources/imagens/logo/logo-min.png" alt="IEscolar Online"/>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--conteudo da pagina-->
+            <div id="container-principal">
+
+                <!--barra menu-->
+                <div id="menu-container">
+                    <h:form prependId="false">
+                                               
+                        <p:menubar id="menuBar">
+                            <p:menuitem icon="ui-icon-home" value="Início" url="/secretario/index.xhtml" ajax="false" style="width: 60px;"/> 
+
+                            <p:submenu label="Administração" icon="ui-icon-note">
+                                <p:menuitem value="Material" url="/secretario/material.xhtml" ajax="false" />
+                                <p:menuitem value="Empréstimo de Material" url="/secretario/emprestimomaterial.xhtml" ajax="false" />
+                                <p:menuitem value="Empréstimo de Livros" url="/secretario/emprestimolivro.xhtml" ajax="false" /> 
+                                <p:separator/>
+                                <p:menuitem value="Afastamentos" url="/secretario/afastamento.xhtml" ajax="false" />
+                                <p:separator/>
+                         
+                                <p:menuitem value="Ocorrência" url="/secretario/ocorrencia.xhtml" ajax="false"/>
+                                <p:separator/>
+                                <p:menuitem value="Agenda" url="/secretario/agenda.xhtml" ajax="false"/>
+                                <p:separator/>
+                                <p:menuitem value="Gerenciamento de Merendeiras" url="/secretario/merendeira.xhtml" ajax="false" />                                
+                                <p:menuitem value="Gerencimento de Supervisores" url="/secretario/supervisor.xhtml" ajax="false"/>
+                                                               
+                                <p:submenu label="Geolocalização">
+                                    <p:submenu label="Alunos">
+                                        <p:menuitem value="Individual" url="/secretario/geolocalizacaoalunos-individual.xhtml" ajax="false"/>
+                                        <p:menuitem value="Ver todos" url="/secretario/geolocalizacaoalunos-todos.xhtml" ajax="false"/>
+                                    </p:submenu>
+                                    <p:menuitem value="Escola" url="/secretario/geolocalizacaoescola-individual.xhtml" ajax="false"/>
+                                 </p:submenu> 
+                                
+                            </p:submenu>
+
+                            <p:submenu label="Gerenciamento" icon="ui-icon-gear" >                                
+                                <p:menuitem value="Vincular Disciplinas" url="/secretario/vincular_disciplina.xhtml" ajax="false" />
+                                <p:menuitem value="Turmas" url="/secretario/turma.xhtml" ajax="false" />
+                                <p:separator/>
+                                <p:menuitem value="Diários" url="/secretario/diario.xhtml" ajax="false"/>
+                                <p:menuitem value="Históricos" url="/secretario/historico.xhtml" ajax="false"/>
+                                <p:separator/>
+                                
+                                <p:submenu label="Professores" styleClass="menuitem">
+                                    <p:menuitem value="Vincular Professor" url="vincularprofessor.xhtml" ajax="false"/>
+                                    <p:menuitem value="Justificar Falta" url="justificar_falta_professor.xhtml" ajax="false"/>
+                                    <p:menuitem value="Colocar Falta" url="colocar_falta.xhtml" ajax="false"/>
+<!--                                    <p:menuitem value="Plano de Ensino" url="planoensino.xhtml" ajax="false"/>-->
+                                </p:submenu> 
+                                <p:menuitem value="Justificar Falta de Aluno" url="/secretario/justificar_falta.xhtml" ajax="false" />
+
+                            </p:submenu>
+
+                            <p:submenu label="Matrícula" icon="ui-icon-contact">                               
+                                <p:submenu label="Alunos" styleClass="menuitem">
+                                   <p:menuitem value="Alunos da escola" url="/secretario/aluno.xhtml" ajax="false"/>
+                                   <p:menuitem value="Pesquisar" url="/secretario/pesquisaralunos.xhtml" ajax="false"/>
+                                </p:submenu>                                
+                                <p:menuitem value="Matrículas" url="/secretario/matricula.xhtml" />
+                                <p:menuitem value="Transferência" url="/secretario/transferencia.xhtml" ajax="false" />
+                            </p:submenu>
+                            
+                            <p:submenu label="Relatório" icon="ui-icon-print">
+                                <p:menuitem value ="Eventos" url="/secretario/relatorioeventos.xhtml" ajax="false" />
+                                <p:separator/>
+                                <p:menuitem value ="Qtde. Alunos por turma" url="/secretario/relatorioturmascadastradas.xhtml" ajax="false" />
+                                <p:menuitem value="Turmas Cadastradas" url="/secretario/turmasmatriculas.xhtml" ajax="false"/> 
+                                <p:menuitem value ="Turmas do Professor" url="/secretario/relatorioturmasprofessor.xhtml" ajax="false" />
+                                <p:separator/>
+                                <p:menuitem value="Alunos Cadastrados" 
+                                            styleClass="item-menu" target="_blank" 
+                                            ajax="false" actionListener="#{relatorioMB.abreRelatorio()}">
+                                    <f:param name="tipoDoRelatorio" value="RELATORIO_ALUNOS_POR_STATUS_CADASTRO"/>
+                                </p:menuitem>
+
+                                <p:menuitem value ="Alunos Matriculados" target="_blank" ajax="false" 
+                                            actionListener="#{relatorioMB.abreRelatorio()}">
+                                    <f:param name="tipoDoRelatorio" value="RELATORIO_ALUNOS_MATRICULADOS"/>
+                                </p:menuitem>                                                              
+
+                                <p:menuitem value ="Alunos por ano letivo e turma" url="/secretario/relatorioalunosporturma.xhtml" ajax="false" />
+                                <p:menuitem value ="Situação dos Alunos" url="/secretario/alunosaprovadosreprovados.xhtml" ajax="false" />
+                                <p:menuitem value ="Frequência por Aluno" url="/secretario/relatoriofrequenciaaluno.xhtml" ajax="false" />
+                                <p:menuitem value ="Desempenho por Aluno" url="/secretario/relatoriodesempenhoaluno.xhtml" ajax="false" />
+                                <p:separator/>
+                                <p:menuitem value ="Lista de Distorção por Idade" url="/secretario/relatoriolistaextorcao.xhtml" ajax="false" />
+                                <p:menuitem styleClass="item-menu" value="Lista de Distorção da Escola" target="_blank" ajax="false" actionListener="#{relatorioMB.abreRelatorio()}">
+                                    <f:param name="tipoDoRelatorio" value="RELATORIO_EXTORCAO_POR_ESCOLA"/>
+                                </p:menuitem>
+                               
+                                <p:menuitem styleClass="item-menu" value="Alunos com Pendência" target="_blank" ajax="false" actionListener="#{relatorioMB.abreRelatorio()}">
+                                    <f:param name="tipoDoRelatorio" value="RELATORIO_DE_PENDENCIA_DO_ALUNO"/>
+                                </p:menuitem>
+                                
+                            </p:submenu>
+                            
+                            <p:submenu label="Comunicação" styleClass="menuitem" icon="ui-icon-signal">
+                                <p:submenu label="Envio de emails">
+                                   <p:menuitem value="Individual" url="/secretario/enviodeemailindividual.xhtml" ajax="false"/>
+                                   <p:menuitem value="Por Grupo" url="/secretario/enviodeemail.xhtml" ajax="false" />
+                                </p:submenu>   
+                            </p:submenu> 
+                            
+                             <p:submenu label="Infraestrutura" styleClass="menuitem" icon="ui-icon-home">
+                                   <p:menuitem value="Fotos da Escola" url="/secretario/visualizar_fotos.xhtml" ajax="false"/>
+                                   <p:menuitem value="Enviar Fotos" url="/secretario/upload_fotos.xhtml" ajax="false" />
+                              </p:submenu> 
+
+                            <p:submenu label="Olá, #{loginMB.viewSecretarioLogado().nomeAbrev}" 
+                                       icon="ui-icon-person" styleClass="menu-logout">
+                                <p:menuitem  ajax="false" value="Alterar Senha" icon="ui-icon-key" url="/secretario/alterasenha.xhtml"/>
+                                <p:menuitem  ajax="false" value="Sair" icon="ui-icon-extlink" action="#{loginMB.logout()}"/>
+                            </p:submenu>
+
+                        </p:menubar>
+                    </h:form>  
+
+                </div>
+
+                <!--paginacao-->
+                <div id="paginacao">
+                    <ui:insert name="mapa-localizacao">
+                        <img src="../resources/imagens/icones/seta2.svg"/>
+
+                        <div class="text-page">
+                            Você está aqui &raquo;
+                            <a href="index.xhtml?faces-redirect=true">Página Inicial</a>
+                        </div>
+                    </ui:insert>
+
+                </div>
+
+                <!--aqui é conteudo dinamico da pagina-->
+                <div id="conteudo-container">
+                    <ui:insert name="conteudo">
+                        <div class="conteudo-estilo">
+                            <!--inserir texto aqui!-->
+                        </div>
+                    </ui:insert>
+
+                </div>
+
+            </div>
+
+            <div id="rodape">
+                <div class="logo-rodape">
+                    <img src="../resources/imagens/logo/logo-rodape.svg"/>
+                </div>
+                Copyright &copy; 2015 <a href="http://redenetsolucoes.com.br/" target="_blank">RedeNet Soluções</a>. Todos os direitos reservados.<br/>
+                <span>contato@redenetsolucoes.com.br</span>
+            </div>
+        </div>
+
+        <script>
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 120) {
+                    $('#menu-container').addClass("sticky");
+                }
+                else {
+                    $('#menu-container').removeClass("sticky");
+                }
+            });
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 120) {
+                    $('.ui-menubar').addClass("sticky");
+                }
+                else {
+                    $('.ui-menubar').removeClass("sticky");
+                }
+            });
+        </script>
+
+    </h:body>
+</html>
+

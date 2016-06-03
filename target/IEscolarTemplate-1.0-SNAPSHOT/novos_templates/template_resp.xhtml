@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>
+            <ui:insert name="titulo">Bem-vindo ao iEscolar Online!</ui:insert>
+        </title>
+        <h:outputScript library="js" name="primefaces-locale.js"/>
+        <h:outputScript library="js" name="progress-bar.js"/>
+        <ui:insert name="style" id="style"/>
+        <ui:insert name="javascript" id="javascript"/>
+        <link rel="stylesheet" type="text/css" href="../resources/css/template.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/alterar-senha.css" />
+        <link rel="shortcut icon" type="image/png" href="../resources/imagens/logo/favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"></meta>
+    </h:head>
+    <h:body>
+
+        <!--pagina toda-->
+        <div id="pagina">
+
+            <!--cabecalho a pagina-->
+            <div id="cabecalho">
+
+                <div id="conteudo-cabecalho">
+
+                    <div id="cabecalho_user">
+                        <div id="user_icon">
+                            <img src="../resources/imagens/icons-help/resp_branco.svg" alt="Módulo Responsável"/>
+                            <span class="titulo_modulo">Módulo Responsável</span>
+                        </div>
+                    </div>
+
+                    <div id="texto_cabecalho">
+                        PREFEITURA MUNICIPAL DE CAJAZEIRAS<br/>
+                        SECRETARIA DE EDUCAÇÃO<br/>
+                    </div>
+
+                    <div id="container_logo">
+                        <img src="../resources/imagens/logo/logo-min.png" alt="IEscolar Online"/>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--conteudo da pagina-->
+            <div id="container-principal">
+
+                <!--barra menu-->
+                <div id="menu-container">
+                    <h:form prependId="false">  
+                        <p:menubar id="menuBar" styleClass="nav-menu">  
+
+                            <p:menuitem icon="ui-icon-home" value="Início" style="width: 60px;" url="/responsavel/index.xhtml" onstart="ajaxLoading.show()" oncomplete="ajaxLoading.hide()" /> 
+
+                            <p:submenu label="Meus Dependentes" icon="ui-icon-copy">  
+                                <p:menuitem value="Boletim" icon="ui-icon-document" url="/responsavel/boletins.xhtml" onstart="PF('ajaxLoading').show();" oncomplete="ajaxLoading.hide()"  />                                                                
+                                <p:separator/>
+                                <p:menuitem value="Histórico" icon="ui-icon-note" url="/responsavel/historico.xhtml" onstart="ajaxLoading.show()" oncomplete="ajaxLoading.hide()"  />  
+                                <p:menuitem value="Ocorrências" icon="ui-icon-calendar" url="/responsavel/ocorrencia.xhtml" onstart="ajaxLoading.show()" oncomplete="ajaxLoading.hide()"  />  
+                            </p:submenu>
+
+                            <p:submenu label="Olá, #{loginMB.viewResposanvelLogado().nomeAbrev}" 
+                                       icon="ui-icon-person" styleClass="menu-logout">
+                                <p:menuitem  ajax="false" value="Alterar Senha" icon="ui-icon-key" url="/responsavel/alterasenha.xhtml"/>
+                                <p:menuitem  ajax="false" value="Sair" icon="ui-icon-extlink" action="#{loginMB.logout()}"/>
+                            </p:submenu>
+
+                        </p:menubar>
+                    </h:form>  
+
+                </div>
+
+                <!--paginacao-->
+                <div id="paginacao">
+                    <ui:insert name="mapa-localizacao">
+                        <img src="../resources/imagens/icones/seta2.svg"/>
+                        <div class="text-page">
+                            Você está aqui &raquo;
+                            <a href="index.xhtml?faces-redirect=true">Página Inicial</a>
+                        </div>
+                    </ui:insert>
+                </div>
+
+                <!--aqui é conteudo dinamico da pagina-->
+                <div id="conteudo-container">
+                    <ui:insert name="conteudo">
+                        <!--inserir texto aqui!-->
+                    </ui:insert>
+                </div>
+
+            </div>
+
+            <div id="rodape">
+
+                <div class="logo-rodape">
+                    <img src="../resources/imagens/logo/logo-rodape.svg"/>
+                </div>
+                Copyright &copy; 2015 <a href="http://redenetsolucoes.com.br/" target="_blank">RedeNet Soluções</a>. Todos os direitos reservados.<br/>
+                <span>contato@redenetsolucoes.com.br</span>
+            </div>
+        </div>
+
+        <script>
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 120) {
+                    $('#menu-container').addClass("sticky");
+                }
+                else {
+                    $('#menu-container').removeClass("sticky");
+                }
+            });
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 120) {
+                    $('.ui-menubar').addClass("sticky");
+                }
+                else {
+                    $('.ui-menubar').removeClass("sticky");
+                }
+            });
+        </script>
+
+    </h:body>
+</html>
+
