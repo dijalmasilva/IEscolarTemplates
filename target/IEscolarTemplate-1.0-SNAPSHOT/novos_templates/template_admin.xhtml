@@ -9,22 +9,25 @@
     <f:metadata>
         <ui:insert name="js-inicial"></ui:insert>
     </f:metadata>
-
     <h:head>
-        <title>
-            <ui:insert name="titulo">Bem-vindo ao iEscolar Online!</ui:insert>
-        </title>
-        <h:outputScript library="js" name="primefaces-locale.js"/>
-        <h:outputScript library="js" name="progress-bar.js"/> 
-        <ui:insert name="style" id="style"/>
-        <ui:insert name="javascript" id="javascript"/>
-        <link rel="stylesheet" type="text/css" href="../resources/css/template.css" />
-        <link rel="stylesheet" type="text/css" href="../resources/css/alterar-senha.css" />
-        <link rel="stylesheet" type="text/css" href="../resources/css/estatistica.css"/>
-        <link rel="shortcut icon" type="image/png" href="../resources/imagens/logo/favicon.png"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"></meta>
-
+        <ui:composition template="/template_head.xhtml"/>
+        <ui:insert name="head">
+            <title>
+                <ui:insert name="titulo">Bem-vindo ao iEscolar Online!</ui:insert>
+            </title>
+            <h:outputScript library="js" name="primefaces-locale.js"/>
+            <h:outputScript library="js" name="progress-bar.js"/>
+            <ui:insert name="style" id="style"/>
+            <ui:insert name="javascript" id="javascript"/>
+                        <link rel="stylesheet" type="text/css" href="../resources/css/template.css" />
+            <link rel="stylesheet" type="text/css" href="../resources/css/newCss.css"/>
+            <link rel="stylesheet" type="text/css" href="../resources/css/alterar-senha.css"/>
+            <link rel="shortcut icon" type="image/png" href="../resources/imagens/logo/favicon.png"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </ui:insert>
     </h:head>
+
+
     <h:body>
 
         <!--pagina toda-->
@@ -85,7 +88,7 @@
                                         <p:menuitem value="Ver todas" url="geolocalizacaoescola-todos.xhtml" ajax="false"/>
                                     </p:submenu>
                                 </p:submenu>
-                             </p:submenu>
+                            </p:submenu>
 
                             <p:submenu label="Secretaria" icon="ui-icon-note">
                                 <p:submenu label="Alunos" styleClass="menuitem">
@@ -107,47 +110,47 @@
                                     <p:menuitem value="Cadastrar Novo" url="cadastrodiario.xhtml" ajax="false"/>
                                 </p:submenu>
                             </p:submenu>
-                            
+
                             <p:submenu label="Profissionais" icon="ui-icon-person" styleClass="menuitem">
                                 <p:menuitem value="Professores" url="professor.xhtml" ajax="false" />
                                 <p:menuitem value="Secretários" url="secretario.xhtml" ajax="false" />
                                 <p:menuitem value="Supervisores" url="supervisor.xhtml" ajax="false"/>
                                 <p:menuitem value="Merendeiras" url="merendeira.xhtml" ajax="false" />
                             </p:submenu>
-                                                       
+
                             <p:submenu label="Estatística" styleClass="menuitem" icon="ui-icon-signal">
                                 <p:menuitem value="Gráficos" url="estatistica.xhtml" ajax="false"/>
                             </p:submenu>
-                                                       
+
                             <p:submenu label="Relatórios" icon="ui-icon-print" styleClass="menuitem">
                                 <p:menuitem styleClass="item-menu" value="Relação Geral de Alunos Cadastrados" target="_blank" ajax="false" actionListener="#{relatorioMB.abreRelatorio()}">
                                     <f:param name="tipoDoRelatorio" value="RELATORIO_ADMIN_ALUNOS_CADASTRADOS_POR_ESCOLA"/>
                                 </p:menuitem>
                                 <p:separator/>
                                 <p:menuitem styleClass="item-menu" value="Relação Geral de Alunos Matriculados" url="alunosmatriculados.xhtml" ajax="false" />
-                                    
+
                                 <p:separator/>
                                 <p:menuitem value="Quantidade de alunos com foto" url="qtdealunoscomfoto.xhtml" /> 
                                 <p:separator/>
                                 <p:menuitem styleClass="item-menu" value="Estatística de Alunos Cadastrados e Matriculados" url="alunosmatriculadoscadastrados.xhtml" ajax="false" />
-                               <!--     <f:param name="tipoDoRelatorio" value="RELATORIO_ESTATISTICA_QTDE_ALUNOS_POR_ESCOLA"/>
-                                </p:menuitem> -->       
+                                <!--     <f:param name="tipoDoRelatorio" value="RELATORIO_ESTATISTICA_QTDE_ALUNOS_POR_ESCOLA"/>
+                                 </p:menuitem> -->       
                                 <p:menuitem styleClass="item-menu" value="Lista de Distorção de Todas as Escolas" target="_blank" ajax="false" actionListener="#{relatorioMB.abreRelatorio()}">
                                     <f:param name="tipoDoRelatorio" value="RELATORIO_EXTORCAO_TODAS_AS_ESCOLAS"/>
                                 </p:menuitem>  
                             </p:submenu>
-                            
-                             <p:submenu label="Comunicação" styleClass="menuitem" icon="ui-icon-signal">
+
+                            <p:submenu label="Comunicação" styleClass="menuitem" icon="ui-icon-signal">
                                 <p:submenu label="Envio de emails" styleClass="menuitem">
-                                   <p:menuitem value="Individual" url="enviodeemailindividual.xhtml" ajax="false"/>
-                                   <p:menuitem value="Por Grupo" url="enviodeemail.xhtml" ajax="false" />
+                                    <p:menuitem value="Individual" url="enviodeemailindividual.xhtml" ajax="false"/>
+                                    <p:menuitem value="Por Grupo" url="enviodeemail.xhtml" ajax="false" />
                                 </p:submenu>
                                 <p:menuitem value="Envio de sms" url="enviodesms.xhtml" />
                             </p:submenu>
-                            
-                             <p:submenu label="Infraestrutura" styleClass="menuitem" icon="ui-icon-home">
-                                    <p:menuitem value="Fotos das Escolas" url="/admin/visualizar_fotos.xhtml" ajax="false"/>
-                             </p:submenu>
+
+                            <p:submenu label="Infraestrutura" styleClass="menuitem" icon="ui-icon-home">
+                                <p:menuitem value="Fotos das Escolas" url="/admin/visualizar_fotos.xhtml" ajax="false"/>
+                            </p:submenu>
 
                             <p:submenu label="Olá, #{loginMB.viewAdministradorLogado().nomeAbrev}" 
                                        icon="ui-icon-person" styleClass="menu-logout">
@@ -198,19 +201,17 @@
 
 
         <script>
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > 120) {
                     $('#menu-container').addClass("sticky");
-                }
-                else {
+                } else {
                     $('#menu-container').removeClass("sticky");
                 }
             });
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > 120) {
                     $('.ui-menubar').addClass("sticky");
-                }
-                else {
+                } else {
                     $('.ui-menubar').removeClass("sticky");
                 }
             });
