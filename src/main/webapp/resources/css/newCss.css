@@ -7,6 +7,8 @@ and open the template in the editor.
     Created on : 03/06/2016, 17:06:13
     Author     : dijalma
 */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 
 *{
     margin: 0px;
@@ -15,6 +17,7 @@ and open the template in the editor.
 
 body{
     background-color: #fcfcfc;
+    font-family: 'Roboto Condensed', sans-serif !important;
 }
 
 .header_login{
@@ -22,33 +25,109 @@ body{
     top: 0;
     width: 100%;
     height: 160px;
-    box-shadow:  0px 0px 4px -2px #000;
+    box-shadow:  0px 0px 10px -2px #000;
     z-index: 10;
+    background: #fcfcfc;
 }
 
-.prefeitura {
+.icon_sistema {
+    float: left;
+    width: 300px;
+    height: 100%;
     text-align: center;
-    /*background: #337ab7;*/
-    width: 450px;
-    height: 80%;
-    margin: 15px;
 }
 
-.prefeitura img {
+#icon_iescolar {
+    position: relative;
+    margin: 0 auto;
+    width: 250px;
+    margin-top: 50px;
+}
+
+.btLogin{
+    float: right;
+    right: 0px;
+    margin: 10px;
     padding: 10px;
-    width: 100px;
-    height: 100px;
 }
 
-.prefeitura h4 {
-    margin-top: 20px;
+.container_slide {
+    width: 100%;
+    margin-top: 160px;
+    background: url(../imagens/cajazeiras/catedral-jul-2012-b.jpg) no-repeat fixed;
+    background-size: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+.effect_shadow{
+    margin: 0 auto;
+    position: absolute;
+    background: #000;
+    opacity: 0.3;
+    width: 100%;
+    height: 600px;
+    border-radius: 5px;
+    box-shadow:  0px 0px 4px 2px #000;
+}
+
+.info_prefeitura{
+    position: relative;
+    color: white;
+    top: 120px !important;
+}
+
+#icon_down {
+    position: relative;
+    width: 5%;
+    top: 160px;
+}
+
+#icon_down:hover{
+    width: 4%;
+    transition-duration: 1s;
+}
+
+.btn-login {
+    background: #5C9464 !important;
+    color: white !important;
+}
+
+.btn-login:hover {
+    transition-duration: 1s;
+    background: #2a4f2a !important;
+}
+
+.container_conteudo {
+    background: #F3F3F3;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Ubuntu Mono' !important;
+    color: #6D6D6D !important;
+}
+
+.container_conteudo h1 {
+    font-size: 50px !important; 
+}
+
+.functions row col-md-3{
+    margin: 10px !important;
+}
+
+.icons {
+    width: 100px;
+}
+
+.conteudo_tema {
+    width: 85%;
+    margin: 0 auto;
+    letter-spacing: 1px;
 }
 
 @media(max-width: 425px){
 
     .prefeitura {
         text-align: center;
-        background: #337ab7;
         width: 90%;
         height: 80%;
         margin: 20px;
