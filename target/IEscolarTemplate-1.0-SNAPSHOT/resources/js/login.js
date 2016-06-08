@@ -7,28 +7,63 @@
 
 $(document).ready(function () {
 
-    posicaoScroll = 0;
+    var posicaoScroll = 0;
+    valorIconDown = -10;
 
-    $(document).scroll(function () {
-        posicaoScroll = $(document).scrollTop();
-//        console.log(posicaoScroll);
-
+    $(window).scroll(function () {
+        posicaoScroll = $(this).scrollTop();
+        console.log(posicaoScroll);
+        
+//        Função para rolagem do header
         if (posicaoScroll === 0) {
             $('.header_login').animate({
-                height: '160px'
+                height: '170px'
             }, 0);
             $('#icon_iescolar').css({
                 marginTop: '50px'
             });
         } else if (posicaoScroll < 90) {
             var tamanho = 170 - posicaoScroll;
-            var marginIcon = 50 - (posicaoScroll/1.8);
+            var marginIcon = 50 - (posicaoScroll / 1.8);
             $('.header_login').animate({
                 height: tamanho + 'px'
             }, 0);
             $('#icon_iescolar').animate({
                 marginTop: marginIcon + 'px'
             }, 0);
+        } else {
+            var marginIcon = 50 - (89 / 1.8);
+            $('.header_login').animate({
+                height: '81px'
+            }, 0);
+            $('#icon_iescolar').animate({
+                marginTop: marginIcon + 'px'
+            }, 0);
+        }
+        
+        //efeito do iescolar
+        if (posicaoScroll > 150){
+            $('#iescolar').addClass('animated rotateInDownLeft');
+        }
+        
+//        efeito das funções 
+        if (posicaoScroll > 490){
+            $('.effect').addClass('animated bounceInUp');
+        }
+        
+        if (posicaoScroll > 1600){
+            $('.icon-footer').addClass('animated slideInLeft');
         }
     });
 });
+
+function efeitoFocus(hash, efeito) {
+
+    var animationName = "animated" + " " + efeito;
+    var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    
+    $(hash).addClass(animationName).one(animationend, function () {
+        $(hash).removeClass(animationName);
+    });
+
+}
