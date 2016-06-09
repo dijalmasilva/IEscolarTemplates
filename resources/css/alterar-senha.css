@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/07/2015, 10:27:17
+    Author     : Elisiany Oliveira
+*/
+
+h2{
+    text-align: center;
+    font-size: 20px;
+    color: #5F9B67 !important;
+    font-family: 'open_sansbold' !important;
+    font-weight: lighter;
+    margin-top: 50px;
+}
+
+#altera-senha{
+    width: 212px;
+    height: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-alter-senha{
+    display: block;
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.bt-alter-senha{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.msg-alter-senha{
+    width: 350px; 
+    margin: 0 auto; 
+    margin-top: -100px;
+}
+
+input{
+    text-transform: none !important;
+    font-size: 13px !important;
+}
+

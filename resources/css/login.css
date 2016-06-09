@@ -1,0 +1,314 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02/06/2015, 16:52:34
+    Author     : Elisiany Oliveira
+*/
+
+/*@import "../fonts/OpenSans/stylesheet.css";*/
+/*@import "../fonts/SourceSans/stylesheet.css";*/
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    background-color: #FEFEFE;
+}
+
+*, html, body{
+    /*font-family: 'open_sanssemibold' !important;*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400
+}
+
+a{
+    font-size: 12px;
+    color: #5F9B67;
+}
+
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #428bca;
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+#box-body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#box-cabecalho{
+    width: 80%;
+    margin: 0 auto;
+    height: 90px;
+    padding-top: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.texto{
+    margin: 0 auto;
+    font-family: 'open_sanssemibold' !important;
+    width: 40%;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #565656;
+}
+
+.texto span{
+    font-family: 'open_sanssemibold' !important;
+    color: #5f9b67;
+}
+.separator{
+    border: none; 
+    border-bottom: 1px dashed #565656;
+}
+
+.logo-iescolar{
+    margin-left: 20px;
+    float: left;
+    margin-top: 10px;
+}
+
+.logo-prefeitura{
+    margin-right: 20px;
+    float: right;
+    margin-top: -75px;
+}
+
+#box-container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.center-div{
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+#box-body img{
+    /*margin-left: 700px;*/ 
+    width: 230px;
+    height: 115px;
+    margin-bottom: -17px;
+    margin-top: 30px;
+}
+
+#box-rodape{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.box-login{
+    width: 30%;
+    height: auto;
+    background: #f5f5f5;
+    border: #e5e5e5;
+    padding: 10px;
+    padding-top: 40px;
+    margin: 0 auto;
+    /*    margin-top: 50px; */
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0px 3px #dcdcdc;
+}
+
+.box-login h5{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 43px;
+    margin-bottom: -8px;
+    font-weight: lighter;
+    margin-top: 3px;
+}
+
+.box-login p{
+    font-size: 11px;
+}
+
+.input-form{
+    width: 70%;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 14px;
+    font-family: 'open_sansregular' !important;
+    color: #000 !important;
+}
+
+.bt-logar{
+    width: 73%;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-left: 5px;
+    text-align: center;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: #5F9B67 !important;
+    color: #fff !important;
+    border: none !important;
+    border-bottom: 3px solid #4C7C52 !important;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.bt-logar:hover{
+    background: #558b5c !important;
+}
+
+.link-esqueci-senha{
+    cursor: pointer;
+}
+
+.ui-messages-error, .ui-message-error{
+    font-size: 12px !important;
+}
+
+.campo-obrigatorio{
+    color: #f00;
+    font-weight: bold;
+}
+
+.ui-state-default, .ui-widget-content, .ui-state-default{
+    background-image: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+
+#errorCaps{
+    color: #c9302c;
+    background-color: transparent;
+    display: inline-block;
+    padding: 3px;
+    display: none;
+    font-family: 'open_sanssemibold' !important;
+    font-size: 12px;
+    font-weight: bolder !important;
+}
+
+@media(max-width:1024px){
+    
+    #box-cabecalho{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .texto{
+        width: 90%;
+        margin: 15px auto;
+    }
+    
+    .box-logo-empresa img{
+        width: 10px;
+    }
+    
+    .box-container{
+        margin: 0px !important;
+        padding: 0px;
+    }
+    
+    .box-login{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .box-login input{
+        margin: 10px;
+    }
+}
+
+@media(max-width:600px){
+    
+    
+    #box-cabecalho{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .texto{
+        width: 90%;
+        margin: 15px auto;
+    }
+    
+    .box-logo-empresa img{
+        width: 10px;
+    }
+    
+    .box-container{
+        margin: 0px !important;
+        padding: 0px;
+    }
+    
+    .box-login{
+        width: 92%;
+        margin: 0px;
+    }
+    
+    .box-login h5{
+        margin-left: 20px;
+    }
+    
+    .box-login input{
+        width: 80%;
+    }
+}
+
+@media(max-width: 320px){
+    #box-cabecalho{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .texto{
+        width: 90%;
+        margin: 15px auto;
+    }
+    
+    .box-logo-empresa img{
+        width: 10px;
+    }
+    
+    .box-container{
+        margin: 0px !important;
+        padding: 0px;
+    }
+    
+    .box-login{
+        width: 92%;
+        margin: 0px;
+    }
+    
+    .box-login h5{
+        margin-left: 20px;
+    }
+    
+    .box-login input{
+        width: 80%;
+    }
+}

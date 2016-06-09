@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/07/2015, 15:46:19
+    Author     : Elisiany Oliveira
+*/
+
+#container-fora{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#container-child-1{
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    width: 42%;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 195px;
+}
+
+#container-child-2{
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    width: 42%;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 195px;
+}
+
+#container-child-1 .panel-grid-4 p, td{
+    font-size: 14px !important;
+    margin-right: 5px !important;
+}
+
+#container-child-2 .panel-grid-4 p, td{
+    font-size: 14px !important;
+    margin-right: 5px !important;
+}
+
+#container-fora .historico{
+    min-height: 260px !important;
+}
+
